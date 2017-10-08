@@ -1,0 +1,77 @@
+<html lang="en">
+<style>
+
+form {
+    border: 3px solid #f1f1f1;
+}
+input[type=text], input[type=password] {
+    width: 20%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 7%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 15%;
+    border-radius: 50%;
+}
+
+</style>
+    <head>
+        <title>Login page</title>
+    </head>
+    <body>
+        <h1 align="center">Login Page</h1>
+	<div align="center">
+        <form class="modal-content animate" >
+	<div class="imgcontainer">
+
+    <img src="image_avatar.png" alt="Avatar" class="avatar">
+  </div>
+	<div class="container">
+         <label><b>Username</b></label>
+	<input type="text"  placeholder="Enter Username" name="userid"/><br><br>
+	<label><b>Password</b></label> 
+            <input type="password" placeholder="Enter Password"  name="pswrd"/><br><br>
+            <button type="submit"   onclick="check(this.form)" >login</button>
+		</div>
+	<div class="container" style="background-color:#f1f1f1">
+             <button type="reset" class="cancelbtn">Cancel</button>
+	 </div>
+        </form>
+        <script language="javascript">
+            function check(form) { 
+               
+                if(form.userid.value == "1516it" && form.pswrd.value == "cbit") {
+                   window.open('crypt.html')
+                }
+                else {
+                    alert("Error Password or Username")
+                }
+            }
+   </script>
+    </body>
+</html>
