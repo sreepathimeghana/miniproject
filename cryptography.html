@@ -1,0 +1,75 @@
+<html>
+<head>
+<style>
+#container
+{
+width:100%;
+text-align:center;
+}
+</style>
+<script language="JavaScript">
+<!--
+function convert_It(form) {
+var a = escape(form1.first.value); 
+var b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ%@*-_+."; 
+var c = "aeiouzxvtrpnljhfdbcgkmqswyZWTQNKHDAEIOUBCFGJLMPRSVXY +(^$:#"; 
+var d;
+var h;
+var i;
+var j = "";
+
+var f = a.length; 
+var e = 0; 
+var g = 1;
+
+while (e != f) { 
+	d = a.substring(e,g); 
+	h = b.indexOf(d); 
+	i = c.charAt(h); 
+	e++; 
+	g++; 
+	j += i; 
+	}
+	form1.second.value = j; 
+}
+
+
+function unconvert_It(form) {
+var aa = form1.second.value;
+var bb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ @*-_+.";
+var cc = "aeiouzxvtrpnljhfdbcgkmqswyZWTQNKHDAEIOUBCFGJLMPRSVXY +(^$:#";
+var dd;
+var hh;
+var ii;
+var jj = "";
+
+var ff = aa.length;
+var ee = 0; 
+var gg = 1;
+
+while (ee != ff) { 
+	dd = aa.substring(ee,gg);
+	hh = cc.indexOf(dd); 
+	ii = bb.charAt(hh); 
+	ee++;
+	gg++;
+	jj += ii;
+	}
+	form1.second.value = jj;
+}
+
+//-->
+</script>
+</head>
+<body style="background-color:beige">
+<form name="form1" id="form1">
+<div id="container">
+<textarea cols="40" rows="20" name="first"></textarea>
+<input type="button" name="go" value="encrypt" onClick="convert_It(this.form)">
+<input type="button" name="Uncovert" value="decrypt" onClick="unconvert_It(this.form)">
+<textarea cols="40" rows="20" name="second"></textarea>
+</div>
+</form>
+<center><img src="encrypt.png" width="500" height="300"></center>
+</body>
+</html>
